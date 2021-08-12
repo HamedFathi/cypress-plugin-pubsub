@@ -9,7 +9,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PubSub from "pubsub-js";
 
 export default defineComponent({
   name: 'Publisher',
@@ -19,7 +18,7 @@ export default defineComponent({
   setup() {
     function notifyNavbar() {
       console.log("Sending Notification");
-      PubSub.publish('notification-update', 1);
+      window.PubSub.publish('notification-update', 1);
       console.log("Notification Sent");
     }
 

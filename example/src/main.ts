@@ -1,4 +1,6 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+/// <reference types="cypress-plugin-pubsub" />
 
-createApp(App).mount('#app')
+import { createApp } from 'vue';
+import App from './App.vue';
+import 'cypress-plugin-pubsub';
+createApp(App).mount('#app');

@@ -5,13 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "cypress": "vue-cli-service test:e2e",
+    "cypress:open": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "@types/pubsub-js": "^1.8.2",
     "cypress": "8.2.0",
+    "cypress-plugin-pubsub": "^1.0.0",
     "pubsub-js": "^1.9.3",
-    "vue": "^3.0.0"
+    "vue": "^3.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-e2e-cypress": "~4.5.13",

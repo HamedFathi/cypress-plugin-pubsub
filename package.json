@@ -1,0 +1,37 @@
+{
+  "name": "cypress-plugin-pubsub",
+  "version": "1.0.1",
+  "description": "A Cypress plugin for the PubSubJS library.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HamedFathi/cypress-plugin-pubsub"
+  },
+  "keywords": [
+    "cypress",
+    "plugin",
+    "pubsub",
+    "publisher",
+    "subscriber",
+    "pubsubjs"
+  ],
+  "author": "Hamed Fathi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HamedFathi/cypress-plugin-pubsub/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "@types/node": "^16.6.0",
+    "@types/pubsub-js": "^1.8.2",
+    "cypress": "^8.2.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "pubsub-js": "^1.9.3"
+  }
+}

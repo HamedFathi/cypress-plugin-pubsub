@@ -4,8 +4,62 @@
 
 # Cypress Plugin PubSubJS 
 
+This plugin use the [PubSubJS](https://github.com/mroderick/PubSubJS) library for pub/sub operations and adds it to `window` object.
 
 ## Installation
 
+Add the plugin into you repository based on below command:
+
+```
+npm i cypress-plugin-pubsub
+
+yarn add cypress-plugin-pubsub
+```
 
 ## Usage
+
+
+#### Inside your project
+
+import `cypress-plugin-pubsub` in your `main` file. This helps you to access `window.PubSub`
+
+```js
+import 'cypress-plugin-pubsub';
+```
+
+If you are using `Typescript` you should add the following line of code to top of your `main` file too.
+
+```js
+/// <reference types="cypress-plugin-pubsub" />
+```
+
+Now you are able to use pub/sub functionalities as following:
+
+```js
+window.PubSub.publish('notification-update', 1);
+
+window.PubSub.subscribe(
+    'notification-update',
+    (message: string, data: number) => {
+        console.log('notification received.');
+        console.log(data);
+        notificationCount.value += data;
+    },
+);
+```
+
+#### Inside Cypress
+
+import `cypress-plugin-pubsub` in your `support/commands.js` Cypress file. 
+
+```js
+import 'cypress-plugin-pubsub';
+```
+
+Now you have new Cypress commands to pub/sub. like:
+
+```js
+cy.publish('notification-update', 12);
+```
+ 
+You are able to access to all the `PubSubJS` functionalities via `window.PubSub` and `cy` objects.

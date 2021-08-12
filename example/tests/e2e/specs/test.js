@@ -16,6 +16,7 @@ describe('test_name', function () {
 
       cy.visit('/');
 
+      // Works too
       // cy.visit('/').its('PubSub').then(p => p.publish('notification-update', 1));
 
       cy.publish('notification-update', 1);

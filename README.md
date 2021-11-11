@@ -2,6 +2,8 @@
 [![npm version](https://badge.fury.io/js/cypress-plugin-pubsub.svg)](https://badge.fury.io/js/cypress-plugin-pubsub)
 [![Downloads](https://img.shields.io/npm/dm/cypress-plugin-pubsub.svg)](https://www.npmjs.com/package/cypress-plugin-pubsub)
 
+![cy](https://user-images.githubusercontent.com/8418700/141257576-f3532625-c479-4f56-a414-98b1e37eff7c.png)
+
 # Cypress Plugin PubSubJS 
 
 This plugin use the [PubSubJS](https://github.com/mroderick/PubSubJS) library for pub/sub operations and adds it to `window` object.

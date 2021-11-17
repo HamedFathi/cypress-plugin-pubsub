@@ -28,6 +28,7 @@
   },
   "homepage": "",
   "devDependencies": {
+    "@types/pubsub-js": "^1.8.3",
     "@types/node": "^16.11.7",
     "copyfiles": "^2.4.1",
     "cypress": "^9.0.0",
@@ -35,7 +36,6 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-	"@types/pubsub-js": "^1.8.3",
     "pubsub-js": "^1.9.4"
   }
 }

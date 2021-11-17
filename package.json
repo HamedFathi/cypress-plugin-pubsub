@@ -1,11 +1,13 @@
 {
   "name": "cypress-plugin-pubsub",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "A Cypress plugin for the PubSubJS library.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "precompile": "rimraf dist",
+    "compile": "tsc -p tsconfig.json",
+    "postcompile": "copyfiles -u 1 src/**/*.d.ts dist"
   },
   "repository": {
     "type": "git",
@@ -26,12 +28,14 @@
   },
   "homepage": "",
   "devDependencies": {
-    "@types/node": "^16.6.0",
-    "@types/pubsub-js": "^1.8.2",
-    "cypress": "^8.2.0",
-    "typescript": "^4.3.5"
+    "@types/node": "^16.11.7",
+    "copyfiles": "^2.4.1",
+    "cypress": "^9.0.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.4"
   },
   "dependencies": {
-    "pubsub-js": "^1.9.3"
+	"@types/pubsub-js": "^1.8.3",
+    "pubsub-js": "^1.9.4"
   }
 }

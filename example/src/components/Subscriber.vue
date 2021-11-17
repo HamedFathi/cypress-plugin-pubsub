@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, ref  } from 'vue';
+import PubSub from 'pubsub-js';
 
 export default defineComponent({
   name: 'Subscriber',
@@ -19,7 +20,7 @@ export default defineComponent({
   setup() {
     const notificationCount = ref(0);
 
-    window.PubSub.subscribe(
+    PubSub.subscribe(
       'notification-update',
       (message: string, data: number) => {
         console.log('notification received.');

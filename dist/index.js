@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/// <reference types="./index" />
 var pubsub_js_1 = __importDefault(require("pubsub-js"));
 // @ts-ignore
 if (window && !window.PubSub) {

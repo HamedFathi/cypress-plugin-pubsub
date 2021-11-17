@@ -1,3 +1,4 @@
+/// <reference types="./index" />
 import PubSub from 'pubsub-js';
 
 // @ts-ignore

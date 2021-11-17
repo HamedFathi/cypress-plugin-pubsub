@@ -1,25 +1,34 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-        <button type="button" @click.prevent="notifyNavbar" data-cy="publisherbutton">
+    <button
+      type="button"
+      @click.prevent="notifyNavbar"
+      data-cy="publisherbutton"
+    >
       Click Me to notify the subscriber below!
     </button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 import PubSub from "pubsub-js";
 
+// @ts-ignore
+if (window.Cypress) {
+  window.PubSub = PubSub;
+}
+
 export default defineComponent({
-  name: 'Publisher',
+  name: "Publisher",
   props: {
     msg: String,
   },
   setup() {
     function notifyNavbar() {
       console.log("Sending Notification");
-      PubSub.publish('notification-update', 1);
+      PubSub.publish("notification-update", 1);
       console.log("Notification Sent");
     }
 

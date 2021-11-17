@@ -13,9 +13,10 @@ declare module Cypress {
         unsubscribe(tokenOrFunction: any): Chainable<Subject>;
     }
 }
-
+/*
 declare module global {
     interface Window {
         PubSub: PubSubJS.Base;
     }
 }
+*/

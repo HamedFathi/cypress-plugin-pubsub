@@ -1,12 +1,11 @@
 /// <reference types="./index" />
-import PubSub from 'pubsub-js';
 
 // @ts-ignore
-if (window && !window.PubSub) {
-    window.PubSub = PubSub;
+if (window && !window.PubSub && typeof Cypress != "undefined") {
+    console.error("!");
 }
 
-if (typeof Cypress != "undefined") {
+if (window && window.PubSub && typeof Cypress != "undefined") {
     Cypress.Commands.add('subscribeOnce', () => {
         return cy.wrap(window.PubSub.subscribeOnce);
     });
